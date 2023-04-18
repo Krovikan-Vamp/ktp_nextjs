@@ -7,7 +7,7 @@ const BudgetSummary = () => {
         ssr: false,
     });
     return (
-        <div className="w-3/12 pb-2 mt-4 rounded-lg bg-slate-50 bg-opacity-90">
+        <div className="pb-2 rounded-lg sm:my-4 lg:w-3/12 bg-slate-50 bg-opacity-90 sm:w-full">
             <div className={dash_card_header}>Technology Budget • 2023</div>
             <DoughnutChartComponent />
         </div>)

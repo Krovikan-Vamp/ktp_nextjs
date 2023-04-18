@@ -31,8 +31,8 @@ const Dashboard = () => {
             <div className="flex flex-row flex-wrap justify-between px-4">
                 <AssetSummary />
                 <BudgetSummary />
-                <CRIPSComponent />
                 <Contracts />
+                <CRIPSComponent />
             </div>
         </div>
 

@@ -10,27 +10,27 @@ const SideNavMSP = () => {
     }, [])
 
     const menu_styles = {
-        item_anchor: `flex active:bg-gray-50 items-center w-full p-2 pl-5 text-base font-normal text-gray-900 transition-all duration-300 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800`,
+        item_anchor: `flex items-center w-full p-2 pl-5 text-base font-normal transition-all duration-300 group hover:text-gray-50 dark:text-gray-300`,
         item_icon: `w-6 h-6 text-orange-400`,
         button_span: `flex-1 ml-3 text-left whitespace-nowrap`,
-        button: `flex items-center w-full p-2 text-base font-normal text-gray-900 transition-all duration-300 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800`,
+        button: `flex items-center w-full p-2 text-base font-normal transition-all duration-300 group hover:text-gray-50 dark:text-gray-300`,
         span_tag: `pl-3`,
         carat: `w-6 h-6 bg-gray-700 rounded group-hover:bg-gray-800`
     }
 
     const anchors = {
-        root_anchor: `flex items-center p-2 text-base font-normal text-gray-900 transition-all duration-300 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800`
+        root_anchor: `flex items-center p-2 text-base font-normal transition-all duration-200 dark:text-gray-300 hover:text-white`
     }
 
     return (mounted ? <>
-        <aside className="h-screen text-gray-100 min-h-fit lg:w-64 md:w-52 sm:w-full">
+        <aside className="h-screen text-gray-50 lg:w-64 md:w-40 sm:w-full">
             <div className="flex flex-col px-0 overflow-y-auto bg-slate-700 sm:w-full md:min-h-screen lg:min-h-screen sm:mt-auto ">
                 <div className="pt-2 text-2xl font-bold text-center min-w-max">InfraPEEK</div>
 
-                <ul className="space-y-1">
+                <ul className="lg:space-y-1">
 
                     <li>
-                        <a href="#" className={anchors.root_anchor}>
+                        <a href="#" className={`${anchors.root_anchor}`}>
                             <svg aria-hidden="true" className="w-6 h-6 text-orange-500 dark:text-orange-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
                             <span className="ml-3">Dashboard</span>
                         </a>
@@ -208,7 +208,7 @@ const SideNavMSP = () => {
                         <img className="object-cover w-8 h-8 rounded-full" src="https://picsum.photos/100" alt="" />
                         <div className="flex flex-col justify-center px-2">
                             <p className="text-md">Kobargo Support - <span className="text-green-400">Active</span></p>
-                            <p className="text-xs text-gray-400">Support Engineer</p>
+                            <p className="text-xs text-gray-300">Support Engineer</p>
                         </div>
                     </div>
                 </div>

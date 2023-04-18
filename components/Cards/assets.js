@@ -7,7 +7,7 @@ const AssetSummary = () => {
         inner_box_label: 'w-full text-center p-2 text-gray-800'
     }
     return (
-        <div className="flex flex-col mt-4 rounded-lg lg:w-3/12 sm:w-full bg-opacity-90 bg-slate-50">
+        <div className="flex flex-col rounded-lg sm:my-4 lg:w-4/12 sm:w-full bg-opacity-90 bg-slate-50">
             <div className={dash_card_header}>Assets</div>
 
             {/* Content */}

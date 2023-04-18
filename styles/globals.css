@@ -17,4 +17,6 @@
 
 }
 
-.parallax-effect {}
+.stroked_path {
+    stroke-dasharray: 10000;
+}

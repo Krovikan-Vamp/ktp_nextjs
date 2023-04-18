@@ -8,7 +8,7 @@ const CRIPSTabs = () => {
     }, [])
 
     const styles = {
-        header_styles: `mt-2 block border-x-0 font-semibold border-b-2 border-t-0 border-transparent px-7 pb-2 pt-4 text-xs font-medium uppercase leading-tight text-slate-500 hover:isolate hover:border-transparent hover:bg-slate-100 focus:isolate data-[te-nav-active]:border-orange data-[te-nav-active]:text-orange dark:text-slate-700 dark:hover:bg-transparent dark:data-[te-nav-active]:border-orange-400 dark:data-[te-nav-active]:text-orange-700`,
+        header_styles: `text-sm mt-2 block border-x-0 font-semibold border-b-2 border-t-0 border-transparent px-7 pb-1 pt-4 font-medium uppercase leading-tight text-slate-500 hover:isolate hover:border-transparent hover:bg-slate-100 focus:isolate data-[te-nav-active]:border-orange data-[te-nav-active]:text-orange dark:text-slate-700 dark:hover:bg-transparent dark:data-[te-nav-active]:border-orange-400 dark:data-[te-nav-active]:text-orange-700`,
 
         content_styles: `p-4 hidden opacity-0 bg-opacity-90 transition-opacity duration-150 ease-linear data-[te-tab-active]:block bg-slate-50 h-full rounded-b-lg`
     }
@@ -20,7 +20,7 @@ const CRIPSTabs = () => {
             role="tablist"
             data-te-nav-ref>
             <li role="presentation">
-                <a href="#tabs-home" className="mt-2 font-semibold block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-2 pt-4 text-xs uppercase leading-tight text-slate-500 hover:isolate hover:border-transparent hover:bg-slate-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-orange data-[te-nav-active]:text-orange dark:text-slate-700 dark:hover:bg-transparent dark:data-[te-nav-active]:border-orange-400 dark:data-[te-nav-active]:text-orange-700" data-te-toggle="pill" data-te-target="#tabs-home" data-te-nav-active role="tab" aria-controls="tabs-home" aria-selected="true">Concerns & Recommendations</a>
+                <a href="#tabs-home" className="mt-2 text-sm font-semibold block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-1 pt-4 uppercase leading-tight text-slate-500 hover:isolate hover:border-transparent hover:bg-slate-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-orange data-[te-nav-active]:text-orange dark:text-slate-700 dark:hover:bg-transparent dark:data-[te-nav-active]:border-orange-400 dark:data-[te-nav-active]:text-orange-700" data-te-toggle="pill" data-te-target="#tabs-home" data-te-nav-active role="tab" aria-controls="tabs-home" aria-selected="true">Concerns & Recommendations</a>
             </li>
             {/* <li role="presentation">
                 <a href="#tabs-profile" className={styles.header_styles} data-te-toggle="pill" data-te-target="#tabs-profile" role="tab" aria-controls="tabs-profile" aria-selected="false">Recommendations</a>
@@ -36,7 +36,7 @@ const CRIPSTabs = () => {
         {/* <!--Tabs content--> */}
         <div className="h-full text-slate-800">
             <div
-                className="hidden opacity-100 pl-4 pt-4 pr-2 bg-opacity-90 transition-opacity duration-150 ease-linear data-[te-tab-active]:block min-h-full bg-slate-50 w-full rounded-b-lg "
+                className="hidden opacity-100 p-4 bg-opacity-90 transition-opacity duration-150 ease-linear data-[te-tab-active]:block min-h-full bg-slate-50 w-full rounded-b-lg "
                 id="tabs-home"
                 role="tabpanel"
                 aria-labelledby="tabs-home-tab"

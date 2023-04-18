@@ -1,8 +1,21 @@
+"use client"
 import Head from 'next/head'
 import SideNavMSP from '@/components/nav'
 import { Dashboard } from '@/components/dashboard'
+import { SplashScreen } from '@/components/splashscreen'
+import { usePathname } from "next/navigation"
+import { useState, useEffect } from "react"
+import { ResponsiveNav } from '@/components/nav_responsive.js'
 
 export default function Home() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const [isLoading, setLoading] = useState(isHome)
+
+  useEffect(() => {
+    if (isLoading) return
+  }, [isLoading])
+
   return (<>
     <Head>
       <title>😐</title>
@@ -11,8 +24,14 @@ export default function Home() {
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <div id='bg-img' className='flex flex-row min-h-screen font-sans parallax-effect'>
-      <SideNavMSP />
-      <Dashboard />
+      {isLoading && isHome ? (
+        <SplashScreen finishLoading={() => setLoading(false)}/>
+      ) : (<>
+        {/* <SplashScreen finishLoading={() => setLoading(false)}/> */}
+        {/* <ResponsiveNav /> */}
+        <SideNavMSP />
+        <Dashboard />
+      </>)}
     </div>
   </>)
 }

@@ -2,10 +2,10 @@ import { dash_card_header } from "../dashboard"
 
 const Contracts = () => {
 
-    return (<div className="w-4/12 lg:my-4">
+    return (<div className="lg:w-4/12 sm:my-4 sm:w-full">
         <div className={dash_card_header} >Contracts</div>
         <div className="rounded-b-lg bg-slate-50 bg-opacity-90">
-            <ul className="overflow-y-auto max-h-64 scrollbar-thin scrollbar-track-slate-700 scrollbar-thumb-orange-400">
+            <ul className="overflow-y-auto max-h-72 scrollbar-thin scrollbar-track-slate-700 scrollbar-thumb-orange-400 scrollbar-track-rounded-lg">
                 <li className="flex flex-col w-full p-4 border-b-2 border-opacity-100 border-neutral-500">
                     <div className="flex flex-row justify-between pl-1">
                         <div className="text-lg font-medium">Meraki VPN Licenses</div>
