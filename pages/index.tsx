@@ -6,6 +6,7 @@ import { SplashScreen } from '@/components/splashscreen'
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import { ResponsiveNav } from '@/components/nav_responsive.js'
+import anime from "animejs"
 
 export default function Home() {
   const pathname = usePathname();
@@ -14,7 +15,21 @@ export default function Home() {
 
   useEffect(() => {
     if (isLoading) return
+    animate()
   }, [isLoading])
+
+  const animate = () => {
+    const loader = anime.timeline({
+    })
+
+    loader.add({
+      targets: `#homepage_fadein`,
+      easing: 'linear',
+      duration: 2000,
+      // translateX: 0.1,
+      opacity: 1
+    })
+  }
 
   return (<>
     <Head>
@@ -23,14 +38,18 @@ export default function Home() {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <div id='bg-img' className='flex flex-row min-h-screen font-sans parallax-effect'>
+    <div id='bg-img' className='flex flex-row min-h-screen parallax-effect lg:overflow-hidden'>
       {isLoading && isHome ? (
-        <SplashScreen finishLoading={() => setLoading(false)}/>
+        <SplashScreen finishLoading={() => setLoading(false)} />
       ) : (<>
-        {/* <SplashScreen finishLoading={() => setLoading(false)}/> */}
+        {/* <SplashScreen finishLoading={() => setLoading(false)} /> */}
         {/* <ResponsiveNav /> */}
-        <SideNavMSP />
-        <Dashboard />
+        <div id="homepage_fadein" className='opacity-0'>
+          <SideNavMSP />
+        </div>
+        <div id="homepage_fadein" className='opacity-0'>
+          <Dashboard />
+        </div>
       </>)}
     </div>
   </>)

@@ -204,9 +204,9 @@ const SideNavMSP = () => {
 
                 {/* User Card */}
                 <div className="mt-auto min-w-max">
-                    <div className="flex p-2">
+                    <div className="flex p-2 ">
                         <img className="object-cover w-8 h-8 rounded-full" src="https://picsum.photos/100" alt="" />
-                        <div className="flex flex-col justify-center px-2">
+                        <div className="flex flex-col justify-center px-2 ">
                             <p className="text-md">Kobargo Support - <span className="text-green-400">Active</span></p>
                             <p className="text-xs text-gray-300">Support Engineer</p>
                         </div>
